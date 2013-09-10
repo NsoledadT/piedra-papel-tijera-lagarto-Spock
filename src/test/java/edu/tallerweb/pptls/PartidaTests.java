@@ -9,10 +9,10 @@ public class PartidaTests {
 	public void queSpockVaporizaPiedra() {
 
 		Mano jugadorUno = new Mano(Forma.LAGARTO);
-		Mano jugadorDos = new Mano(Forma.PIEDRA);
+		Mano jugadorDos = new Mano(Forma.PAPEL);
 
-		assertEquals("Piedra aplasta Lagarto",
-				Resultado.PIERDE, jugadorUno.jugarCon(jugadorDos));
+		assertEquals("Lagarto come papel",
+				Resultado.GANA, jugadorUno.jugarCon(jugadorDos));
 	
 
 	}
