@@ -1,23 +1,20 @@
 package edu.tallerweb.pptls;
 
 
-/**
- * Representa una de las Manos involucradas en el juego
- */
 public class Mano {
 	
-    private  Integer forma;
+    private final Integer forma;
     private int resultadoJuego;
     private final int tablaResultado[][] = {{0,1,1,2,2},
 			                                {2,0,1,1,2},
 			                                {2,2,0,1,1},
 			                                {1,2,2,0,1},
 			                                {1,1,2,2,0}};
-	public Mano( Forma forma) {
+	public Mano( final Forma forma) {
 		this.forma=forma.getValor();
 	}
 	
-	public Resultado jugarCon(Mano otra) {
+	public Resultado jugarCon(final Mano otra) {
 	   resultadoJuego = tablaResultado[this.forma][otra.forma];
 	   if(resultadoJuego == 2){
 		     return Resultado.GANA;
@@ -30,7 +27,7 @@ public class Mano {
 	      else{
 	    	 return Resultado.EMPATA;
 	 		    }
-	    }
+	      }
 	 }
 	
 }
